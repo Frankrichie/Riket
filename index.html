@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ricket-Interior Designer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+<style>
+
+  /* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo h1 {
+  font-size: 24px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+}
+
+.nav-menu li {
+  margin-right: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 0;
+  background-color: #f9c45a;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #333;
+}
+
+.portfolio {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.portfolio-item {
+  margin: 20px;
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.services {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.service {
+  margin: 20px;
+}
+
+.service img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.contact {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}
+.button {
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  background-color: purple;
+}
+.button:hover {
+  background-color: rgb(240, 101, 240);
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  background-color: purple;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.topBtn:hover {
+  background-color: #555;
+}
+
+</style>
+
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html" style="font-size: 30px; color: purple"
+          >RIKET-INTERIOR</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto" style="font-weight: 700">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+            <a class="nav-link" href="#services">Services</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#loginForm">contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero" style="background-color: rgb(233, 102, 233); color: white;">
+      <h2>Welcome to Riket-Interior Design World</h2>
+      <p style="color: whitesmoke; font-size: 20px;">Your Dream Space Awaits</p>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="portfolio-item">
+        <img src="images/living room 3.webp" alt="Portfolio Item 1" />
+        <h3>Living Room</h3>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/bed room 3.jpg" alt="Portfolio Item 2" />
+        <h3>Bedroom</h3>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/dining1.JPG" alt="Portfolio Item 1" />
+
+        <h3>Dinning</h3>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/kitchen 1.jpg" alt="Portfolio Item 3" />
+        <h3>Kitchen</h3>
+      </div>
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img
+              src="images/living room2.png"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="images/kitchen3.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="images/consultation 3.jpeg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="images/bed room 1.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <div style="height: 3px;width: 100%; background-color: black;"></div>
+    <section class="services" id="services">
+      <h2>Services</h2>
+      <div class="service">
+        <img src="images/ourservice.JPG" alt="Service 1" />
+        <p>
+          <br>
+<b>
+  And also We Manage
+
+</b>          
+<br>
+       <b>   -Residential Interior Decorating:</b>    Whether you're looking to revamp your living room, bedroom, kitchen, or entire home, we offer comprehensive interior decorating services that bring your vision to life. <br><br>
+          
+       <b>   - Commercial Interior Decorating:</b> We create inspiring and functional workspaces that enhance productivity and leave a lasting impression on clients and employees alike.
+       <br><br>
+          
+        <b>  - Consultations and Design Planning:</b> If you're not ready for a complete redesign, we offer consultations and design planning services to help you get started on the right track. <br><br>
+      
+        <b> - Project Management:</b> We oversee every aspect of your project, ensuring it stays on schedule and within budget, so you can relax and watch your dream space come to life. <br><br>
+
+        <img src="images/sevices image 1.jpg" alt="Service 1" /><br><br>
+
+        <div style="height: 3px;width: 100%; background-color: black;"></div>
+      </p>
+        <br> <br>
+        <h2>Our Bussiness Card/Socia media</h2>
+        <img src="images/front-card (2).JPG" alt="Service 1" /><br><br>
+        <h5>Click here to follow us on our socia-media or massage us directly on Whatsapp</h5>
+        <a href="#" class="fs-1 text-decoration-none" >
+          <i class="bi bi-instagram" style="color: orangered;"></i>
+        </a>
+        <a href="#"  class="text-decoration-none">
+          <i class="bi bi-facebook fs-1"></i>
+
+        </a>
+        <a href="#" class="fs-1 ms-3">
+          <i class="bi bi-whatsapp fs-1" style="color: green;"></i>
+        </a><br><br>
+        <div style="height: 3px;width: 100%; background-color: black;"></div><br>
+        <h3 id="about">About-Us</h3>
+        <p style="font-size: 15px;">
+          We create stunning interior designs tailored to your style and needs. <br>
+
+
+Welcome to <span style="color: purple;font-size: 20px; font-weight: 500;">[RIKET-INTERIOR]</span>, your premier destination for exceptional interior decorating services in Nigeria. We are passionate about transforming spaces into beautiful, functional, and inspiring environments that reflect your unique style and personality. <br>
+<b> Our vision</b> <br>
+
+At <span style="color: purple;font-size: 18px; font-weight: 500;">[RIKET-INTERIOR]</span>, we believe that your home or workspace should be a reflection of your individuality. Our vision is to create interior designs that not only meet your functional needs but also elevate your lifestyle, fostering a sense of joy and harmony within your surroundings. We aim to be at the forefront of interior design trends, offering innovative and sustainable solutions to our clients across Nigeria. <br><br>
+
+ <b> Our Approach</b><br><br>
+
+Our approach to interior decorating is rooted in collaboration. We take the time to listen to your ideas, preferences, and vision for your space. By understanding your lifestyle, taste, and aspirations, we tailor our designs to meet your specific needs. We believe that the best results come from a harmonious partnership between our skilled designers and you, the client.
+<br><br>
+ <b> What Sets Us Apart</b><br><br>
+
+1. <b> Local Expertise:</b> As a Nigerian interior decorator, we understand the cultural nuances, climate considerations, and local materials available, allowing us to create designs that are not only aesthetically pleasing but also practical for Nigerian living.
+<br><br>
+2. <b>Innovation:</b> We are committed to staying up-to-date with the latest trends, materials, and technologies in interior design. Our innovative solutions ensure that your space is not only beautiful but also functional and sustainable. <br><br>
+
+3. <b> Tailored Designs:</b> We don't believe in a one-size-fits-all approach. Every project we undertake is unique, and we tailor our designs to your specific requirements, ensuring that your personality shines through in every detail. <br><br>
+
+4. <b> Quality Craftsmanship</b>: We work with a network of trusted artisans and suppliers to deliver top-notch quality in every aspect of your project, from furniture selection to installation. <br>
+<br>
+
+
+Let's Create Something Beautiful Together
+
+At <span style="color: purple;font-size: 18px; font-weight: 500;">[RIKET-INTERIOR]</span>, we're passionate about turning your interior decorating dreams into reality. Whether you're looking to transform your home or office, we're here to guide you through the process, from concept to completion. Contact us today to schedule a consultation and take the first step towards creating a space that truly reflects your style and personality. Together, we'll make your space a masterpiece.
+        </p>
+        <img src="pic13.jpg" alt="Service 1" />
+      </div>
+      <div class="service">
+        <img src="service2.jpg" alt="Service 2" /><br><br>
+        <div 5  style="height: 3px;width: 100%; background-color: black;"></div><br>
+        <h3>Color Consultation</h3>
+        <p>
+          <br>
+          Discover the perfect color palette for your home with our expert
+          guidance. <br><br>
+        <img src="images/consultation 4.webp" alt="Service 3" /><br><br>
+
+
+        <b>  Unlock the Power of Color with Our Color Consultation Services</b>
+        <br><br>
+
+          Choosing the right colors for your interior space is an art that can have a profound impact on the overall look and feel. At [Your Interior Decorator's Name], we offer specialized Color Consultation services to help you make informed choices that harmonize with your style and create the perfect atmosphere. <br><br>
+          
+       <b>Why Color Matters</b>   <br><br>
+          
+          Color is a powerful tool in interior design. It can evoke emotions, set the mood, and define the personality of a room. Our color consultation service recognizes that selecting the ideal color palette can be challenging. That's where we step in. <br><br>
+          
+      <b>    Our Approach</b> <br><br>
+          
+      <b>    - Personalized Guidance:</b> We take the time to understand your vision, preferences, and the unique characteristics of your space.
+      <br><br>
+          
+       <b>   - Expert Knowledge:</b> Our experienced color consultants have an in-depth understanding of color psychology, trends, and how different hues interact with light and space. <br><br>
+          
+      <b>    - Sample Selection:</b> We provide you with a curated selection of color samples tailored to your project, allowing you to visualize the options in your space. <br><br>
+          
+     <b>     - Practical Advice:</b> We consider factors such as lighting, room size, and existing decor to ensure the chosen colors work harmoniously with your environment. <br><br>
+          
+      <b>    The Benefits of Color Consultation</b> <br> <br>
+          
+     <b>     - Enhanced Ambiance:</b> The right colors can transform a room, creating a welcoming and inviting atmosphere that suits your lifestyle. <br><br>
+          
+      <b>    - Coordinated Design:</b> We ensure that your color choices complement your existing furnishings and decor, resulting in a cohesive and balanced design. <br><br>
+          
+     <b>     - Increased Property Value:</b> Thoughtful color choices can add value to your property, making it more attractive to potential buyers or tenants. <br><br>
+          
+       <b>   - Personal Expression:</b> Your home should be a reflection of your personality. Our color consultation service helps you infuse your uniqu e style into your space. <br><br>
+          
+        <b> Let's Paint Your World Beautiful</b>
+          
+          Don't leave your color choices to chance. Our Color Consultation services at <span style="color: purple;font-size: 18px; font-weight: 500;">[RIKET-INTERIOR]</span> empower you to make confident decisions that enhance the beauty and functionality of your interior spaces. Contact us today to schedule a consultation and embark on a colorful journey toward creating the perfect ambiance in your home or workplace.
+        </p>
+      </div>
+      <div class="service">
+        <b>Samples of colour consultation</b> <br><br>
+        <img src="images/consultation 1.jpg" alt="Service 3" /><br><br>
+        <img src="images/consultation 3.jpeg" alt="Service 3" /><br><br>
+        <div style="height: 3px;width: 100%; background-color: black;"></div><br>
+        <h3>Home Styling</h3>
+        <p>
+          Elevate your living spaces with our professional home styling
+          services.
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="contact"
+      id="loginForm" 
+      style="
+        background-image: url(images/pic5.jpg);
+        background-size: cover;
+        background-blend-mode: darken;
+        background-color: rgba(0, 0, 0, 0.431);color: white;
+      "
+    >
+    <h3>Contact Us</h3>
+    <form >
+      <p id="error-message" style="color: red; display: none" class="fs-3">
+        Please fill out all fields <i class=" bi bi-exclamation-triangle"></i>
+      </p>
+      <p id="success-message" style="color: green; display: none" class="fs-2">
+        Your message is Successfully <br>
+        Thanks!
+
+      
+        <button type="button"   style="height: 50px; width: 50px;border-radius: 50%;background-color: green;color: white;font-size: 15px;text-align: center; border: none;"> <a href="index.html" class="text-light text-decoration-none"><i class="bi bi-check-circle-fill fs-2"></i>     </a> </button>
+
+      </p>
+      <label for="name" style="color: white">Name:</label>
+      <input type="text" id="name" name="name" required />
+    
+      <label for="email" style="color: white">Email:</label>
+      <input type="email" id="email" name="email" required />
+    
+      <label for="phone" style="color: white">Phone:</label>
+      <input type="phone" id="phone" name="phone" required />
+    
+      <label for="message" style="color: white">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+    
+      <button type="reset" class="button" onclick="SendMessage()">
+        Send Message
+      </button>
+    </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Interior Designer. All rights reserved.</p>
+    </footer>
+
+<script>
+
+document
+  .getElementById("loginForm")
+  .addEventListener("reset", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || message === "") {
+      // Display error message if fields are not filled
+      document.getElementById("error-message").style.display = "block";
+      document.getElementById("success-message").style.display = "none";
+    } else {
+      // If fields are filled, display success message
+      document.getElementById("error-message").style.display = "none";
+      document.getElementById("success-message").style.display = "block";
+    }
+  });
+
+</script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+      function SendMessage() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let message = document.getElementById("message").value;
+        let body =
+          "Name:" +
+          name +
+          "<br/> Email:" +
+          email +
+          "<br/> Phone:" +
+          phone +
+          "<br/> Message:" +
+          message
+        Email.send({
+          SecureToken: "cfbb28d4-dfca-4c74-baf8-3ac35a7efe92",
+          To: "francisekah5@gmail.com",
+          From: "francisekah5@gmail.com",
+          Subject: "Message From Ricket contact Form",
+          Body: body,
+        }).then((message) => alert(thanks));
+      }
+    </script>
+    <button class="topBtn"><i class="bi bi-arrow-up"></i></button>
+
+<script>
+//get the scroll button
+      const topBtn = document.querySelector(".topBtn")
+window.addEventListener("scroll",checkHeight)
+
+function checkHeight(){
+  if(window.scrollY > 5000){
+    topBtn.style.display = "flex"
+  }else{
+    topBtn.style.display = "none"
+
+  }
+}
+
+topBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  })
+})
+
+</script>
+  </body>
+</html>
